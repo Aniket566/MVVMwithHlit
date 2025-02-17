@@ -17,9 +17,9 @@ import javax.inject.Singleton
 class MovieDetailsRepository @Inject constructor(
     @Named("moviesApi") private val apiService: ApiService
 ) {
-    suspend fun getMovieDetails(movieId: Int): MovieDetail = withContext(Dispatchers.IO) {
+    suspend fun getMovieDetails(movieId: Int, apiKey:String ): MovieDetail = withContext(Dispatchers.IO) {
         try {
-            val response = apiService.getMovieDetails(movieId)
+            val response = apiService.getMovieDetails(movieId,apiKey)
             if (response.isSuccessful) {
                 response.body() ?: throw Exception("Movie details not found")
             } else {

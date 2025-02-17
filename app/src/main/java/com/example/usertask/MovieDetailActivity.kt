@@ -58,8 +58,9 @@ class MovieDetailActivity : AppCompatActivity() {
     }
 
     private fun loadMovieDetails() {
+        val apiKey = BuildConfig.TMDB_API_KEY
         val movieId = intent.getIntExtra("id", 0)
-        viewModel.loadMovieDetails(movieId)
+        viewModel.loadMovieDetails(movieId ,apiKey)
     }
 
     private fun showLoading() {

@@ -18,11 +18,11 @@ class MovieDetailViewModel @Inject constructor(
     private val _movieDetailState = MutableLiveData<MovieDetailState>()
     val movieDetailState: LiveData<MovieDetailState> = _movieDetailState
 
-    fun loadMovieDetails(movieId: Int) {
+    fun loadMovieDetails(movieId: Int,apiKey:String) {
         viewModelScope.launch {
             _movieDetailState.value = MovieDetailState.Loading
             try {
-                val result = repository.getMovieDetails(movieId)
+                val result = repository.getMovieDetails(movieId,apiKey)
                 _movieDetailState.value = MovieDetailState.Success(result)
             } catch (e: Exception) {
                 _movieDetailState.value = MovieDetailState.Error(e.message ?: "Unknown error occurred")

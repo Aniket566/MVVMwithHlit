@@ -53,11 +53,3 @@ TMDB_BASE_URL=https://api.themoviedb.org/3/
 - Fetch and display trending movies from TMDb.
 - Navigate to detailed movie information.
 
-## Contribution
-
-Feel free to fork the repository and contribute by submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License.
-
