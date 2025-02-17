@@ -25,7 +25,7 @@ This is an Android application built using Kotlin and follows the MVVM architect
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/android-app.git
+   git clone https://github.com/Aniket566/MVVMwithHlit.git
    ```
 2. Open the project in Android Studio.
 3. Sync the project with Gradle files.
